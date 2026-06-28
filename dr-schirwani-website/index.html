@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Dr Schaida Schirwani, Consultant Clinical Geneticist. Private practice specialising in neurodevelopmental disorders, dysmorphology, and rare genetic conditions." />
+  <title>Dr Schaida Schirwani | Consultant Clinical Geneticist</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;500;600;700&family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --navy: #0A2540; --navy-mid: #163354; --navy-light: #1E4976;
+      --teal: #0891B2; --teal-dim: #0E7490; --teal-light: #22D3EE; --teal-pale: #CFFAFE;
+      --gold: #B5975A; --gold-light: #D4B27A;
+      --cream: #FAFAF8; --white: #FFFFFF; --gray-50: #F9FAFB; --gray-100: #F3F4F6;
+      --text-head: #0F1B2D; --text-body: #374151; --text-muted: #6B7280; --border: #E2E8F0;
+      --r-sm: 6px; --r-md: 12px; --r-lg: 20px;
+      --sh-sm: 0 1px 3px rgba(10,37,64,.08),0 1px 2px rgba(10,37,64,.05);
+      --sh-md: 0 4px 16px rgba(10,37,64,.10),0 2px 6px rgba(10,37,64,.06);
+      --sh-lg: 0 20px 48px rgba(10,37,64,.14),0 8px 20px rgba(10,37,64,.08);
+      --f-head: 'Figtree', system-ui, sans-serif; --f-body: 'Noto Sans', system-ui, sans-serif;
+      --t: all .22s ease;
+      --surf-0: var(--cream); --surf-1: var(--white); --surf-card: var(--white); --surf-muted: var(--gray-50);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --cream: #0D1B2A; --white: #122338; --gray-50: #162E45; --gray-100: #1A3550;
+        --border: #1E3D5C; --text-head: #EDF2F7; --text-body: #C5D5E4; --text-muted: #7B97B2;
+        --teal-pale: rgba(8,145,178,.15);
+        --surf-0: #0D1B2A; --surf-1: #122338; --surf-card: #162E45; --surf-muted: #1A3550;
+      }
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--f-body); color: var(--text-body); background: var(--surf-0); line-height: 1.65; -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; transition: var(--t); }
+    .skip { position: absolute; top: -100%; left: 1rem; background: var(--navy); color: #fff; padding: .5rem 1rem; border-radius: 0 0 var(--r-sm) var(--r-sm); font-size: .875rem; font-weight: 600; z-index: 9999; }
+    .skip:focus { top: 0; }
+    .nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,37,64,.97); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); border-bottom: 1px solid rgba(255,255,255,.07); }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 2rem; height: 68px; display: flex; align-items: center; justify-content: space-between; }
+    .nav-brand { display: flex; flex-direction: column; gap: 1px; cursor: pointer; }
+    .nav-brand-name { font-family: var(--f-head); font-weight: 600; font-size: 1rem; color: #fff; letter-spacing: -.01em; }
+    .nav-brand-sub { font-size: .7rem; color: var(--gold-light); letter-spacing: .08em; text-transform: uppercase; }
+    .nav-links { display: flex; align-items: center; gap: 2rem; list-style: none; }
+    .nav-links a { font-size: .875rem; color: rgba(255,255,255,.78); letter-spacing: .02em; }
+    .nav-links a:hover { color: #fff; }
+    .nav-cta { background: var(--gold); color: #fff !important; padding: .5rem 1.25rem; border-radius: var(--r-sm); font-weight: 600 !important; font-size: .8125rem !important; }
+    .nav-cta:hover { background: var(--gold-light) !important; }
+    .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: .5rem; color: #fff; }
+    .fade-up { opacity: 0; transform: translateY(24px); transition: opacity .55s ease, transform .55s ease; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .fade-up.d1 { transition-delay: .1s; } .fade-up.d2 { transition-delay: .2s; } .fade-up.d3 { transition-delay: .3s; } .fade-up.d4 { transition-delay: .4s; }
+    @media (prefers-reduced-motion: reduce) { .fade-up { opacity: 1; transform: none; transition: none; } *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+    .hero { min-height: 100vh; background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 55%, #0d3a6b 100%); position: relative; overflow: hidden; display: flex; align-items: center; padding-top: 68px; }
+    .hero::before { content: ''; position: absolute; top: -200px; right: -200px; width: 700px; height: 700px; border-radius: 50%; background: radial-gradient(circle, rgba(8,145,178,.12) 0%, transparent 70%); pointer-events: none; }
+    .hero::after { content: ''; position: absolute; bottom: -100px; left: -100px; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(181,151,90,.08) 0%, transparent 70%); pointer-events: none; }
+    .hero-inner { max-width: 1200px; margin: 0 auto; padding: 5rem 2rem 4rem; display: grid; grid-template-columns: 1fr 420px; gap: 5rem; align-items: center; position: relative; z-index: 1; }
+    .hero-eyebrow { display: inline-flex; align-items: center; gap: .5rem; background: rgba(181,151,90,.15); border: 1px solid rgba(181,151,90,.3); color: var(--gold-light); font-size: .75rem; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; padding: .375rem .875rem; border-radius: 100px; margin-bottom: 1.5rem; }
+    .hero-title { font-family: var(--f-head); font-weight: 300; font-size: clamp(2.25rem, 4vw, 3.5rem); color: #fff; line-height: 1.15; letter-spacing: -.02em; margin-bottom: .25rem; }
+    .hero-title strong { font-weight: 700; display: block; }
+    .hero-creds { display: flex; gap: .5rem; flex-wrap: wrap; margin: .75rem 0 1.5rem; }
+    .cred-badge { background: rgba(8,145,178,.2); border: 1px solid rgba(8,145,178,.35); color: var(--teal-light); font-size: .75rem; font-weight: 600; padding: .25rem .75rem; border-radius: 100px; letter-spacing: .04em; }
+    .hero-desc { font-size: 1.0625rem; color: rgba(255,255,255,.72); line-height: 1.7; max-width: 480px; margin-bottom: 2.5rem; }
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .btn-gold { display: inline-flex; align-items: center; gap: .5rem; background: var(--gold); color: #fff; font-family: var(--f-body); font-weight: 600; font-size: .9375rem; padding: .875rem 1.75rem; border-radius: var(--r-sm); border: none; cursor: pointer; transition: var(--t); text-decoration: none; }
+    .btn-gold:hover { background: var(--gold-light); transform: translateY(-1px); box-shadow: 0 8px 24px rgba(181,151,90,.35); }
+    .btn-gold:focus-visible { outline: 3px solid var(--gold-light); outline-offset: 3px; }
+    .btn-ghost { display: inline-flex; align-items: center; gap: .5rem; background: transparent; color: #fff; font-family: var(--f-body); font-weight: 500; font-size: .9375rem; padding: .875rem 1.75rem; border-radius: var(--r-sm); border: 1px solid rgba(255,255,255,.25); cursor: pointer; transition: var(--t); text-decoration: none; }
+    .btn-ghost:hover { border-color: rgba(255,255,255,.6); background: rgba(255,255,255,.06); }
+    .photo-card { background: rgba(255,255,255,.05); border: 1px solid rgba(255,255,255,.1); border-radius: var(--r-lg); overflow: hidden; backdrop-filter: blur(8px); }
+    .photo-slot { width: 100%; aspect-ratio: 3/4; background: linear-gradient(160deg, rgba(8,145,178,.18) 0%, rgba(10,37,64,.4) 100%); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1rem; padding: 2rem; }
+    .photo-slot-icon { width: 80px; height: 80px; border-radius: 50%; background: rgba(255,255,255,.08); border: 2px dashed rgba(255,255,255,.2); display: flex; align-items: center; justify-content: center; }
+    .photo-slot-icon svg { opacity: .4; }
+    .photo-slot-label { color: rgba(255,255,255,.35); font-size: .8125rem; text-align: center; font-style: italic; }
+    .card-stats { display: grid; grid-template-columns: repeat(3,1fr); border-top: 1px solid rgba(255,255,255,.1); }
+    .card-stat { padding: 1.25rem 1rem; text-align: center; border-right: 1px solid rgba(255,255,255,.1); }
+    .card-stat:last-child { border-right: none; }
+    .card-stat-n { font-family: var(--f-head); font-weight: 700; font-size: 1.5rem; color: #fff; line-height: 1; margin-bottom: .25rem; }
+    .card-stat-l { font-size: .6875rem; color: rgba(255,255,255,.45); text-transform: uppercase; letter-spacing: .07em; }
+    section { position: relative; }
+    .inner { max-width: 1200px; margin: 0 auto; padding: 5rem 2rem; }
+    .section-h { font-family: var(--f-head); font-weight: 700; font-size: clamp(1.75rem,3vw,2.5rem); color: var(--text-head); line-height: 1.2; letter-spacing: -.02em; }
+    .section-sub { font-size: 1.0625rem; color: var(--text-muted); line-height: 1.7; max-width: 600px; margin-top: 1rem; }
+    .gold-rule { height: 3px; background: linear-gradient(90deg, transparent, var(--gold), transparent); opacity: .35; }
+    .about { background: var(--surf-1); }
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; margin-top: 3.5rem; }
+    .about-text p { font-size: 1.0625rem; line-height: 1.75; margin-bottom: 1.25rem; color: var(--text-body); }
+    .about-text p:last-child { margin-bottom: 0; }
+    .qual-card { background: var(--surf-muted); border: 1px solid var(--border); border-radius: var(--r-md); padding: 2rem; }
+    .qual-title { font-family: var(--f-head); font-weight: 700; font-size: 1rem; color: var(--text-head); margin-bottom: 1.5rem; padding-bottom: 1rem; border-bottom: 2px solid var(--teal-pale); }
+    .qual-list { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
+    .qual-item { display: flex; gap: 1rem; align-items: flex-start; }
+    .qual-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--teal); margin-top: 6px; flex-shrink: 0; }
+    .qual-text { font-size: .9375rem; color: var(--text-body); line-height: 1.5; }
+    .qual-text strong { display: block; font-weight: 600; color: var(--text-head); }
+    .affil { margin-top: 1.5rem; background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); border-radius: var(--r-md); padding: 1.5rem; display: flex; gap: 1rem; align-items: flex-start; }
+    .affil-icon { width: 40px; height: 40px; background: rgba(8,145,178,.2); border-radius: var(--r-sm); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .affil-name { display: block; font-size: .9375rem; font-weight: 600; color: #fff; margin-bottom: .25rem; }
+    .affil-sub { font-size: .8125rem; color: rgba(255,255,255,.6); }
+    .expertise { background: var(--surf-0); }
+    .cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 3rem; }
+    .card { background: var(--surf-card); border: 1px solid var(--border); border-radius: var(--r-md); padding: 2rem; transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
+    .card:hover { transform: translateY(-3px); box-shadow: var(--sh-md); border-color: var(--teal-pale); }
+    .card-icon { width: 48px; height: 48px; background: linear-gradient(135deg, var(--teal-pale) 0%, rgba(8,145,178,.1) 100%); border-radius: var(--r-sm); display: flex; align-items: center; justify-content: center; margin-bottom: 1.25rem; }
+    .card h3 { font-family: var(--f-head); font-weight: 700; font-size: 1rem; color: var(--text-head); margin-bottom: .75rem; line-height: 1.3; }
+    .card p { font-size: .9rem; color: var(--text-muted); line-height: 1.65; }
+    .services { background: linear-gradient(160deg, var(--navy) 0%, var(--navy-mid) 100%); }
+    .services .section-h { color: #fff; } .services .section-sub { color: rgba(255,255,255,.65); }
+    .svc-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3.5rem; }
+    .svc-item { display: flex; gap: 1.25rem; align-items: flex-start; }
+    .svc-num { font-family: var(--f-head); font-weight: 700; font-size: 2rem; color: rgba(181,151,90,.3); line-height: 1; min-width: 2.5rem; flex-shrink: 0; }
+    .svc-item h3 { font-family: var(--f-head); font-weight: 600; font-size: 1.0625rem; color: #fff; margin-bottom: .5rem; line-height: 1.3; }
+    .svc-item p { font-size: .9rem; color: rgba(255,255,255,.6); line-height: 1.65; }
+    .svc-note { margin-top: 3.5rem; padding: 1.75rem 2rem; background: rgba(181,151,90,.1); border: 1px solid rgba(181,151,90,.25); border-radius: var(--r-md); display: flex; gap: 1rem; align-items: flex-start; }
+    .svc-note p { font-size: .9375rem; color: rgba(255,255,255,.75); line-height: 1.65; } .svc-note strong { color: var(--gold-light); }
+    .publications { background: var(--surf-1); }
+    .pub-stats { margin-top: 3rem; display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+    .pub-stat { background: var(--surf-muted); border: 1px solid var(--border); border-radius: var(--r-md); padding: 1.75rem; text-align: center; }
+    .pub-stat-n { font-family: var(--f-head); font-weight: 700; font-size: 2.25rem; color: var(--navy); line-height: 1; margin-bottom: .5rem; }
+    @media (prefers-color-scheme: dark) { .pub-stat-n { color: var(--teal-light); } }
+    .pub-stat-d { font-size: .875rem; color: var(--text-muted); }
+    .pub-list { margin-top: 3rem; display: flex; flex-direction: column; }
+    .pub-item { padding: 1.75rem 0; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: auto 1fr auto; gap: 1.5rem; align-items: start; }
+    .pub-item:first-child { padding-top: 0; }
+    .pub-year { font-family: var(--f-head); font-weight: 700; font-size: .875rem; color: var(--teal); min-width: 3rem; padding-top: 2px; }
+    .pub-content h3 { font-family: var(--f-head); font-weight: 600; font-size: 1rem; color: var(--text-head); margin-bottom: .375rem; line-height: 1.4; }
+    .pub-journal { font-size: .875rem; font-style: italic; color: var(--text-muted); }
+    .pub-tag { font-size: .6875rem; font-weight: 600; letter-spacing: .07em; text-transform: uppercase; padding: .25rem .625rem; border-radius: 100px; white-space: nowrap; }
+    .tag-teal { background: var(--teal-pale); color: var(--teal-dim); } .tag-green { background: #F0FDF4; color: #16A34A; }
+    @media (prefers-color-scheme: dark) { .tag-teal { background: rgba(8,145,178,.2); color: var(--teal-light); } .tag-green { background: rgba(22,163,74,.15); color: #4ADE80; } }
+    .contact { background: var(--surf-0); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 3.5rem; align-items: start; }
+    .contact-info h3 { font-family: var(--f-head); font-weight: 700; font-size: 1.5rem; color: var(--text-head); margin-bottom: 1rem; }
+    .contact-info p { font-size: 1rem; color: var(--text-muted); line-height: 1.7; margin-bottom: 2rem; }
+    .c-methods { display: flex; flex-direction: column; gap: 1rem; }
+    .c-method { display: flex; gap: 1rem; align-items: center; padding: 1.25rem 1.5rem; background: var(--surf-1); border: 1px solid var(--border); border-radius: var(--r-md); transition: var(--t); }
+    .c-method:hover { border-color: var(--teal); box-shadow: var(--sh-sm); }
+    .c-method-icon { width: 40px; height: 40px; background: var(--teal-pale); border-radius: var(--r-sm); display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .c-method-text strong { display: block; font-size: .875rem; font-weight: 600; color: var(--text-head); margin-bottom: .125rem; } .c-method-text span { font-size: .875rem; color: var(--text-muted); }
+    .form-card { background: var(--surf-1); border: 1px solid var(--border); border-radius: var(--r-lg); padding: 2.5rem; box-shadow: var(--sh-md); }
+    .form-title { font-family: var(--f-head); font-weight: 700; font-size: 1.25rem; color: var(--text-head); margin-bottom: .5rem; }
+    .form-desc { font-size: .9rem; color: var(--text-muted); margin-bottom: 2rem; }
+    .f-group { margin-bottom: 1.25rem; }
+    .f-group label { display: block; font-size: .875rem; font-weight: 600; color: var(--text-head); margin-bottom: .5rem; }
+    .f-group label .req { color: #DC2626; margin-left: 2px; }
+    .f-group input, .f-group select, .f-group textarea { width: 100%; padding: .75rem 1rem; border: 1px solid var(--border); border-radius: var(--r-sm); font-family: var(--f-body); font-size: .9375rem; color: var(--text-body); background: var(--surf-0); transition: var(--t); appearance: none; }
+    .f-group input:focus, .f-group select:focus, .f-group textarea:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px rgba(8,145,178,.12); }
+    .f-group textarea { resize: vertical; min-height: 100px; }
+    .f-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .form-submit { width: 100%; padding: .875rem; background: var(--navy); color: #fff; font-family: var(--f-body); font-weight: 600; font-size: .9375rem; border: none; border-radius: var(--r-sm); cursor: pointer; transition: var(--t); margin-top: .5rem; }
+    .form-submit:hover { background: var(--navy-light); transform: translateY(-1px); } .form-submit:focus-visible { outline: 3px solid var(--teal); outline-offset: 3px; } .form-submit:disabled { opacity: .65; cursor: not-allowed; transform: none; }
+    .form-success { display: none; text-align: center; padding: 2rem 1rem; }
+    .form-success svg { margin: 0 auto 1rem; }
+    .form-success h4 { font-family: var(--f-head); font-weight: 700; font-size: 1.125rem; color: var(--text-head); margin-bottom: .5rem; }
+    .form-success p { font-size: .9375rem; color: var(--text-muted); }
+    .footer { background: var(--navy); border-top: 1px solid rgba(255,255,255,.07); }
+    .footer-inner { max-width: 1200px; margin: 0 auto; padding: 3rem 2rem; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 3rem; }
+    .footer-brand h3 { font-family: var(--f-head); font-weight: 700; font-size: 1.0625rem; color: #fff; margin-bottom: .375rem; }
+    .footer-creds { font-size: .8125rem; color: var(--gold-light); letter-spacing: .04em; margin-bottom: 1rem; }
+    .footer-brand p { font-size: .875rem; color: rgba(255,255,255,.5); line-height: 1.65; max-width: 300px; }
+    .footer-col h4 { font-family: var(--f-head); font-weight: 600; font-size: .875rem; color: rgba(255,255,255,.9); margin-bottom: 1rem; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: .625rem; }
+    .footer-col ul a { font-size: .875rem; color: rgba(255,255,255,.5); } .footer-col ul a:hover { color: rgba(255,255,255,.85); }
+    .footer-bottom { max-width: 1200px; margin: 0 auto; padding: 1.5rem 2rem; border-top: 1px solid rgba(255,255,255,.07); display: flex; justify-content: space-between; align-items: center; gap: 1rem; flex-wrap: wrap; }
+    .footer-bottom p { font-size: .8125rem; color: rgba(255,255,255,.35); }
+    @media (max-width: 1024px) { .hero-inner { grid-template-columns: 1fr; gap: 3rem; } .photo-card { max-width: 380px; margin: 0 auto; } .cards { grid-template-columns: repeat(2,1fr); } .about-grid { gap: 3rem; } }
+    @media (max-width: 768px) {
+      .nav-links { display: none; } .nav-links.open { display: flex; flex-direction: column; position: absolute; top: 68px; left: 0; right: 0; background: rgba(10,37,64,.98); padding: 1.5rem 2rem; gap: 1.25rem; border-bottom: 1px solid rgba(255,255,255,.08); backdrop-filter: blur(12px); } .nav-toggle { display: flex; }
+      .inner { padding: 3.5rem 1.25rem; } .about-grid { grid-template-columns: 1fr; } .cards { grid-template-columns: 1fr; } .svc-grid { grid-template-columns: 1fr; gap: 2rem; } .contact-grid { grid-template-columns: 1fr; } .footer-inner { grid-template-columns: 1fr; gap: 2rem; } .footer-bottom { flex-direction: column; align-items: flex-start; } .f-row { grid-template-columns: 1fr; } .pub-item { grid-template-columns: auto 1fr; } .pub-tag { display: none; } .pub-stats { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 480px) { .hero-title { font-size: 2rem; } .hero-actions { flex-direction: column; } .btn-gold, .btn-ghost { justify-content: center; } }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to main content</a>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand" aria-label="Dr Schaida Schirwani homepage">
+        <span class="nav-brand-name">Dr Schaida Schirwani</span>
+        <span class="nav-brand-sub">Consultant Clinical Geneticist</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" onclick="toggleNav(this)">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#services">Private Practice</a></li>
+        <li><a href="#publications">Research</a></li>
+        <li><a href="#contact" class="nav-cta">Book Appointment</a></li>
+      </ul>
+    </div>
+  </nav>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="hero-eyebrow fade-up" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Consultant Clinical Geneticist</div>
+          <h1 class="hero-title fade-up d1" id="hero-heading"><span style="font-weight:300">Dr Schaida</span><strong>Schirwani</strong></h1>
+          <div class="hero-creds fade-up d2" role="list" aria-label="Qualifications"><span class="cred-badge" role="listitem">MBChB</span><span class="cred-badge" role="listitem">MSc Medical Genetics</span><span class="cred-badge" role="listitem">MRCP</span></div>
+          <p class="hero-desc fade-up d3">Expert assessment, diagnosis, and genetic counselling for children and adults with neurodevelopmental disorders, dysmorphology, and rare genetic conditions.</p>
+          <div class="hero-actions fade-up d4">
+            <a href="#contact" class="btn-gold"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>Request Appointment</a>
+            <a href="#expertise" class="btn-ghost">Explore Expertise</a>
+          </div>
+        </div>
+        <div class="photo-card fade-up d2" aria-hidden="true">
+          <div class="photo-slot"><div class="photo-slot-icon"><svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg></div><p class="photo-slot-label">Portrait of Dr Schirwani<br><small>Replace with professional photo</small></p></div>
+          <div class="card-stats" role="list" aria-label="Career highlights"><div class="card-stat" role="listitem"><div class="card-stat-n">32+</div><div class="card-stat-l">Publications</div></div><div class="card-stat" role="listitem"><div class="card-stat-n">193+</div><div class="card-stat-l">Citations</div></div><div class="card-stat" role="listitem"><div class="card-stat-n">NHS</div><div class="card-stat-l">Consultant</div></div></div>
+        </div>
+      </div>
+    </section>
+    <section class="about" id="about" aria-labelledby="about-heading">
+      <div class="inner">
+        <h2 class="section-h fade-up" id="about-heading">About Dr Schirwani</h2>
+        <p class="section-sub fade-up d1">A distinguished academic clinician with extensive NHS and research experience.</p>
+        <div class="about-grid">
+          <div class="about-text fade-up d2">
+            <p>Dr Schaida Schirwani is a Consultant Clinical Geneticist at the Wessex Clinical Genetics Service, University Hospital Southampton NHS Foundation Trust. With advanced training in medical genetics and general internal medicine (MRCP), she brings a broad clinical perspective to every patient encounter.</p>
+            <p>Her clinical work encompasses assessment, diagnosis, and management of individuals and families with a wide range of genetic conditions: from complex neurodevelopmental presentations in children to rare dysmorphic syndromes and hereditary conditions.</p>
+            <p>Dr Schirwani is an active researcher with over 32 peer-reviewed publications, including contributions to GeneReviews (NIH). She is committed to translating cutting-edge genomic science into meaningful clinical care.</p>
+            <p>In private practice, she offers timely access to specialist genetic assessment, detailed counselling, and coordination with other specialists, supporting families through a complex and often emotional journey.</p>
+          </div>
+          <div class="fade-up d3">
+            <div class="qual-card">
+              <p class="qual-title">Qualifications and Training</p>
+              <ul class="qual-list">
+                <li class="qual-item"><div class="qual-dot" aria-hidden="true"></div><div class="qual-text"><strong>MBChB</strong>Bachelor of Medicine and Surgery</div></li>
+                <li class="qual-item"><div class="qual-dot" aria-hidden="true"></div><div class="qual-text"><strong>MSc Medical Genetics</strong>Postgraduate specialist training in clinical genetics</div></li>
+                <li class="qual-item"><div class="qual-dot" aria-hidden="true"></div><div class="qual-text"><strong>MRCP</strong>Member of the Royal Colleges of Physicians</div></li>
+                <li class="qual-item"><div class="qual-dot" aria-hidden="true"></div><div class="qual-text"><strong>Consultant Clinical Geneticist</strong>NHS specialist-grade appointment</div></li>
+                <li class="qual-item"><div class="qual-dot" aria-hidden="true"></div><div class="qual-text"><strong>GeneReviews Author</strong>NIH-accredited expert chapter contributor</div></li>
+              </ul>
+            </div>
+            <div class="affil"><div class="affil-icon" aria-hidden="true"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22D3EE" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div><span class="affil-name">Wessex Clinical Genetics Service</span><span class="affil-sub">University Hospital Southampton NHS Foundation Trust</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="gold-rule" aria-hidden="true"></div>
+    <section class="expertise" id="expertise" aria-labelledby="expertise-heading">
+      <div class="inner">
+        <h2 class="section-h fade-up" id="expertise-heading">Areas of Expertise</h2>
+        <p class="section-sub fade-up d1">Specialist assessment and genetic counselling across a broad spectrum of conditions, with particular depth in rare and complex presentations.</p>
+        <div class="cards" role="list">
+          <article class="card fade-up d1" role="listitem"><div class="card-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0891B2" stroke-width="1.8"><path d="M9.5 2A2.5 2.5 0 0112 4.5v15a2.5 2.5 0 01-4.96-.46 2.5 2.5 0 01-1.07-4.73A3 3 0 016 11a3 3 0 011.74-2.72A2.5 2.5 0 019.5 2z"/><path d="M14.5 2A2.5 2.5 0 0112 4.5v15a2.5 2.5 0 004.96-.46 2.5 2.5 0 001.07-4.73A3 3 0 0018 11a3 3 0 00-1.74-2.72A2.5 2.5 0 0014.5 2z"/></svg></div><h3>Neurodevelopmental Disorders</h3><p>Assessment of developmental delay, intellectual disability, autism spectrum disorder, ADHD, and complex behavioural presentations with an underlying genetic aetiology.</p></article>
+          <article class="card fade-up d2" role="listitem"><div class="card-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0891B2" stroke-width="1.8"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div><h3>Dysmorphology</h3><p>Clinical evaluation of individuals with unusual physical features, structural differences, or congenital anomalies to identify underlying genetic syndromes.</p></article>
+          <article class="card fade-up d3" role="listitem"><div class="card-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0891B2" stroke-width="1.8"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div><h3>Rare Genetic Conditions</h3><p>Diagnosis and management of rare, ultra-rare, and novel genetic conditions, including ASXL3-related (Bainbridge-Ropers) syndrome and other recently characterised genomic disorders.</p></article>
+          <article class="card fade-up d1" role="listitem"><div class="card-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0891B2" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg></div><h3>Genetic Counselling</h3><p>Patient-centred counselling to help individuals and families understand the implications of a genetic diagnosis, recurrence risks, and reproductive options.</p></article>
+          <article class="card fade-up d2" role="listitem"><div class="card-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0891B2" stroke-width="1.8"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div><h3>Genomic Interpretation</h3><p>Interpretation of whole-exome and whole-genome sequencing results, chromosomal microarray, and gene panels, translating complex genomic data into clear clinical guidance.</p></article>
+          <article class="card fade-up d3" role="listitem"><div class="card-icon" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0891B2" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><h3>Paediatric Genetics</h3><p>Holistic assessment of children referred with suspected genetic syndromes, including joint clinics with paediatric radiology, developmental paediatrics, and metabolic medicine.</p></article>
+        </div>
+      </div>
+    </section>
+    <section class="services" id="services" aria-labelledby="services-heading">
+      <div class="inner">
+        <h2 class="section-h fade-up" id="services-heading">What to Expect</h2>
+        <p class="section-sub fade-up d1">Private consultations provide timely access to specialist genetics expertise with a thorough, unhurried approach tailored to your needs.</p>
+        <div class="svc-grid">
+          <div class="svc-item fade-up d1"><div class="svc-num" aria-hidden="true">01</div><div><h3>Initial Consultation</h3><p>A comprehensive genetic assessment including detailed personal and family history, clinical examination where appropriate, and a thorough review of all previous investigations.</p></div></div>
+          <div class="svc-item fade-up d2"><div class="svc-num" aria-hidden="true">02</div><div><h3>Diagnostic Testing</h3><p>Arrangement of targeted or broad-based genetic testing including chromosomal microarray, gene panels, and exome sequencing through accredited UK laboratories.</p></div></div>
+          <div class="svc-item fade-up d1"><div class="svc-num" aria-hidden="true">03</div><div><h3>Results and Counselling</h3><p>A dedicated results appointment to discuss findings clearly and fully, including implications for the individual, siblings, and other family members, with a written summary provided.</p></div></div>
+          <div class="svc-item fade-up d2"><div class="svc-num" aria-hidden="true">04</div><div><h3>Specialist Coordination</h3><p>Liaison with other paediatric and adult specialists, referral to NHS services where appropriate, and coordination of a multi-disciplinary care plan when required.</p></div></div>
+          <div class="svc-item fade-up d1"><div class="svc-num" aria-hidden="true">05</div><div><h3>Follow-Up and Support</h3><p>Ongoing follow-up appointments as new genetic information emerges, plus written reports suitable for schools and other services.</p></div></div>
+          <div class="svc-item fade-up d2"><div class="svc-num" aria-hidden="true">06</div><div><h3>Second Opinion</h3><p>Expert independent review of previous genetic assessments, variant reclassifications, and diagnostic uncertainty, providing clarity when families have unresolved questions.</p></div></div>
+        </div>
+        <div class="svc-note fade-up" role="note"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4B27A" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg><p><strong>GP or specialist referral welcome.</strong> Self-referrals are also accepted. Most private health insurers recognise Dr Schirwani as a specialist; please check with your insurer before booking. A full written report is provided following every appointment.</p></div>
+      </div>
+    </section>
+    <section class="publications" id="publications" aria-labelledby="pub-heading">
+      <div class="inner">
+        <h2 class="section-h fade-up" id="pub-heading">Selected Publications</h2>
+        <p class="section-sub fade-up d1">Contributing to the global genetics literature with over 32 peer-reviewed publications and 193 citations.</p>
+        <div class="pub-stats fade-up d2" role="list" aria-label="Research statistics"><div class="pub-stat" role="listitem"><div class="pub-stat-n">32+</div><div class="pub-stat-d">Peer-reviewed publications</div></div><div class="pub-stat" role="listitem"><div class="pub-stat-n">193+</div><div class="pub-stat-d">Research citations</div></div><div class="pub-stat" role="listitem"><div class="pub-stat-n">NIH</div><div class="pub-stat-d">GeneReviews contributor</div></div></div>
+        <div class="pub-list fade-up d3" role="list">
+          <article class="pub-item" role="listitem"><div class="pub-year">2025</div><div class="pub-content"><h3>Early onset basal cell carcinoma: Consider Bazex-Dupre-Christol syndrome</h3><div class="pub-journal">European Journal of Medical Genetics</div></div><span class="pub-tag tag-teal" aria-label="Journal article">Journal</span></article>
+          <article class="pub-item" role="listitem"><div class="pub-year">2024</div><div class="pub-content"><h3>Coexistence of multiple self-healing squamous epithelioma and features of Loeys-Dietz syndrome</h3><div class="pub-journal">Clinical and Experimental Dermatology</div></div><span class="pub-tag tag-teal" aria-label="Journal article">Journal</span></article>
+          <article class="pub-item" role="listitem"><div class="pub-year">2023</div><div class="pub-content"><h3>Familial Bainbridge-Ropers syndrome: Report of familial ASXL3 inheritance and a milder phenotype</h3><div class="pub-journal">American Journal of Medical Genetics Part A</div></div><span class="pub-tag tag-green" aria-label="Research article">Research</span></article>
+          <article class="pub-item" role="listitem"><div class="pub-year">2020</div><div class="pub-content"><h3>GeneReviews: ASXL3-Related Syndrome</h3><div class="pub-journal">NIH National Library of Medicine, GeneReviews</div></div><span class="pub-tag tag-teal" aria-label="Book chapter">Chapter</span></article>
+          <article class="pub-item" role="listitem"><div class="pub-year">2020</div><div class="pub-content"><h3>Genetics for paediatric radiologists</h3><div class="pub-journal">Pediatric Radiology</div></div><span class="pub-tag tag-teal" aria-label="Journal article">Journal</span></article>
+        </div>
+        <p style="margin-top:2rem;font-size:.875rem;color:var(--text-muted)" class="fade-up">Full publication list on <a href="https://www.researchgate.net/profile/Schaida-Schirwani" target="_blank" rel="noopener noreferrer" style="color:var(--teal);font-weight:600;text-decoration:underline">ResearchGate</a>.</p>
+      </div>
+    </section>
+    <div class="gold-rule" aria-hidden="true"></div>
+    <section class="contact" id="contact" aria-labelledby="contact-heading">
+      <div class="inner">
+        <h2 class="section-h fade-up" id="contact-heading">Book a Consultation</h2>
+        <p class="section-sub fade-up d1">Appointments available for private patients. GP or specialist referrals welcome, as are self-referrals.</p>
+        <div class="contact-grid">
+          <div class="contact-info fade-up d2">
+            <h3>Enquiries and Appointments</h3>
+            <p>To request a private consultation or ask whether an assessment is right for you, please use the form or the contact details below. We aim to respond within one working day.</p>
+            <div class="c-methods">
+              <div class="c-method"><div class="c-method-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0891B2" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div><div class="c-method-text"><strong>Email</strong><span>schaida.mustafa@gmail.com</span></div></div>
+              <div class="c-method"><div class="c-method-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0891B2" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div><div class="c-method-text"><strong>Response time</strong><span>Within 1 working day</span></div></div>
+              <div class="c-method"><div class="c-method-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0891B2" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div class="c-method-text"><strong>Location</strong><span>Southampton and surrounding region</span></div></div>
+              <div class="c-method"><div class="c-method-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0891B2" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8 19.79 19.79 0 01.67 2.18 2 2 0 012.67 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg></div><div class="c-method-text"><strong>Telehealth</strong><span>Video consultations available</span></div></div>
+            </div>
+          </div>
+          <div class="form-card fade-up d3">
+            <p class="form-title">Appointment Request</p>
+            <p class="form-desc">Share a few details and we will be in touch to confirm availability and next steps.</p>
+            <form id="appt-form" aria-label="Appointment request form" novalidate>
+              <div class="f-row"><div class="f-group"><label for="fname">First name <span class="req" aria-hidden="true">*</span></label><input type="text" id="fname" name="First name" autocomplete="given-name" required placeholder="Jane" /></div><div class="f-group"><label for="lname">Last name <span class="req" aria-hidden="true">*</span></label><input type="text" id="lname" name="Last name" autocomplete="family-name" required placeholder="Smith" /></div></div>
+              <div class="f-group"><label for="email">Email address <span class="req" aria-hidden="true">*</span></label><input type="email" id="email" name="Email" autocomplete="email" required placeholder="jane@example.com" /></div>
+              <div class="f-group"><label for="phone">Phone number</label><input type="tel" id="phone" name="Phone" autocomplete="tel" placeholder="+44 7000 000000" /></div>
+              <div class="f-group"><label for="reason">Reason for referral <span class="req" aria-hidden="true">*</span></label><select id="reason" name="Reason" required><option value="" disabled selected>Please select...</option><option value="neurodevelopmental">Neurodevelopmental disorder / ASD</option><option value="dysmorphology">Dysmorphology / unusual features</option><option value="rare-genetic">Rare or undiagnosed genetic condition</option><option value="counselling">Genetic counselling</option><option value="second-opinion">Second opinion</option><option value="genomics">Genomic test interpretation</option><option value="other">Other</option></select></div>
+              <div class="f-group"><label for="message">Brief clinical summary <span class="req" aria-hidden="true">*</span></label><textarea id="message" name="Message" required placeholder="Please briefly describe the concerns or questions you would like to discuss..." rows="4"></textarea></div>
+              <button type="submit" class="form-submit" id="submit-btn">Send Appointment Request</button>
+            </form>
+            <div class="form-success" id="form-success" aria-live="polite" role="status"><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#16A34A" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg><h4>Request sent</h4><p>Thank you. We will be in touch within one working day to discuss your enquiry and confirm next steps.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer" role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand"><h3>Dr Schaida Schirwani</h3><p class="footer-creds">MBChB · MSc Medical Genetics · MRCP · Consultant Clinical Geneticist</p><p>Private specialist in clinical genetics and genomic medicine, providing expert assessment, diagnosis, and genetic counselling for children and adults.</p></div>
+      <nav class="footer-col" aria-label="Quick links"><h4>Quick Links</h4><ul><li><a href="#about">About</a></li><li><a href="#expertise">Expertise</a></li><li><a href="#services">Private Practice</a></li><li><a href="#publications">Research</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+      <nav class="footer-col" aria-label="Specialties"><h4>Specialties</h4><ul><li><a href="#expertise">Neurodevelopmental</a></li><li><a href="#expertise">Dysmorphology</a></li><li><a href="#expertise">Rare Conditions</a></li><li><a href="#expertise">Genetic Counselling</a></li><li><a href="#expertise">Genomic Interpretation</a></li></ul></nav>
+    </div>
+    <div class="footer-bottom"><p>&copy; 2026 Dr Schaida Schirwani. All rights reserved.</p><p>This website is for information only and does not constitute medical advice. In an emergency, please call 999 or attend your nearest A&amp;E.</p></div>
+  </footer>
+  <script>
+    function toggleNav(btn) { const links = document.getElementById('nav-links'); const open = links.classList.toggle('open'); btn.setAttribute('aria-expanded', open); }
+    document.querySelectorAll('#nav-links a').forEach(a => { a.addEventListener('click', () => { document.getElementById('nav-links').classList.remove('open'); document.querySelector('.nav-toggle').setAttribute('aria-expanded', 'false'); }); });
+    document.querySelectorAll('section[id]').forEach(s => { new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { const id = e.target.id; document.querySelectorAll('.nav-links a[href^="#"]').forEach(a => { a.style.color = a.getAttribute('href') === `#${id}` ? '#fff' : 'rgba(255,255,255,.78)'; }); } }); }, { rootMargin: '-30% 0px -60% 0px' }).observe(s); });
+    const io = new IntersectionObserver(entries => { entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); } }); }, { threshold: 0.12 });
+    document.querySelectorAll('.fade-up').forEach(el => io.observe(el));
+    document.getElementById('appt-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      const fname = document.getElementById('fname').value.trim(), lname = document.getElementById('lname').value.trim(), email = document.getElementById('email').value.trim(), reason = document.getElementById('reason').value, message = document.getElementById('message').value.trim();
+      if (!fname || !lname || !email || !reason || !message) { btn.textContent = 'Please complete all required fields'; btn.style.background = '#DC2626'; setTimeout(() => { btn.textContent = 'Send Appointment Request'; btn.style.background = ''; }, 2500); return; }
+      btn.textContent = 'Sending...'; btn.disabled = true;
+      const body = `Name: ${fname} ${lname}\nEmail: ${email}\nReason: ${reason}\n\n${message}`;
+      window.location.href = `mailto:schaida.mustafa@gmail.com?subject=Appointment Request - ${fname} ${lname}&body=${encodeURIComponent(body)}`;
+      setTimeout(() => { this.style.display = 'none'; document.getElementById('form-success').style.display = 'block'; }, 600);
+    });
+  </script>
+</body>
+</html>
